@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Books.Designer.cs">
+      <DependentUpon>Add_Books.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forget_Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add_Books.resx">
+      <DependentUpon>Add_Books.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forget_Password.resx">
       <DependentUpon>Forget_Password.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main-qimg-de8b167dd81f54c9fd3c6d599a06a435.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

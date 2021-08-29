@@ -108,5 +108,20 @@ namespace Library_Management
         {
 
         }
+
+        private void addBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_Books AddBook = new Add_Books();
+            AddBook.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to exit?","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

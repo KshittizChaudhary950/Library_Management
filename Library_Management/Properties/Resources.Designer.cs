@@ -109,5 +109,15 @@ namespace Library_Management.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap main_qimg_de8b167dd81f54c9fd3c6d599a06a435 {
+            get {
+                object obj = ResourceManager.GetObject("main-qimg-de8b167dd81f54c9fd3c6d599a06a435", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
