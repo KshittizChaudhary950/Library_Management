@@ -12,19 +12,23 @@ using System.Configuration;
 
 namespace Library_Management
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         string cs = ConfigurationManager.ConnectionStrings["dbcs2"].ConnectionString;
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        void Clear()
         {
             UsernametextBox.Clear();
             PasswordtextBox.Clear();
             UsernametextBox.Focus();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,6 +61,7 @@ namespace Library_Management
             {
                 MessageBox.Show("Please enter username and password");
             }
+            Clear(); // calling clear function
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,6 +72,13 @@ namespace Library_Management
                 con.Close();
             }
             con.Open();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Forget_Password f1 = new Forget_Password();
+            f1.Show();
         }
     }
 }
