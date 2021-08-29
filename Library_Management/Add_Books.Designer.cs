@@ -120,7 +120,7 @@ namespace Library_Management
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 288);
+            this.label7.Location = new System.Drawing.Point(29, 288);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 20);
             this.label7.TabIndex = 6;
@@ -178,12 +178,13 @@ namespace Library_Management
             // 
             this.Savebutton.BackColor = System.Drawing.Color.Aqua;
             this.Savebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Savebutton.Location = new System.Drawing.Point(39, 330);
+            this.Savebutton.Location = new System.Drawing.Point(33, 330);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(75, 32);
             this.Savebutton.TabIndex = 7;
             this.Savebutton.Text = "Save";
             this.Savebutton.UseVisualStyleBackColor = false;
+            this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
             // Updatebutton
             // 
@@ -195,6 +196,7 @@ namespace Library_Management
             this.Updatebutton.TabIndex = 8;
             this.Updatebutton.Text = "Update";
             this.Updatebutton.UseVisualStyleBackColor = false;
+            this.Updatebutton.Click += new System.EventHandler(this.Updatebutton_Click);
             // 
             // Cancelbutton
             // 
@@ -225,6 +227,7 @@ namespace Library_Management
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(615, 254);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // SearchtextBox
             // 
@@ -307,6 +310,7 @@ namespace Library_Management
             this.Name = "Add_Books";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Books";
+            this.Load += new System.EventHandler(this.Add_Books_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             this.ResumeLayout(false);
