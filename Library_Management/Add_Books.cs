@@ -170,5 +170,11 @@ namespace Library_Management
         
 
         }
+
+        private void Deletebutton_Click(object sender, EventArgs e)
+        {
+            // working on delete
+
+        }
     }
 }
