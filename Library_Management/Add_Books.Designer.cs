@@ -48,10 +48,10 @@ namespace Library_Management
             this.Deletebutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchtextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.searchbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -208,6 +208,7 @@ namespace Library_Management
             this.Cancelbutton.TabIndex = 10;
             this.Cancelbutton.Text = "Cancel";
             this.Cancelbutton.UseVisualStyleBackColor = false;
+            this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
             // 
             // Deletebutton
             // 
@@ -233,21 +234,11 @@ namespace Library_Management
             // SearchtextBox
             // 
             this.SearchtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchtextBox.Location = new System.Drawing.Point(808, 76);
+            this.SearchtextBox.Location = new System.Drawing.Point(749, 73);
             this.SearchtextBox.Name = "SearchtextBox";
             this.SearchtextBox.Size = new System.Drawing.Size(140, 26);
             this.SearchtextBox.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Aqua;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(954, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SearchtextBox.TextChanged += new System.EventHandler(this.SearchtextBox_TextChanged);
             // 
             // IdnumericUpDown
             // 
@@ -279,16 +270,28 @@ namespace Library_Management
             this.label9.Text = "Back";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // searchbtn
+            // 
+            this.searchbtn.BackColor = System.Drawing.Color.Aqua;
+            this.searchbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbtn.Location = new System.Drawing.Point(942, 70);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(87, 30);
+            this.searchbtn.TabIndex = 12;
+            this.searchbtn.Text = "Search";
+            this.searchbtn.UseVisualStyleBackColor = false;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
+            // 
             // Add_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1051, 425);
+            this.Controls.Add(this.searchbtn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.IdnumericUpDown);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.SearchtextBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Deletebutton);
@@ -340,9 +343,9 @@ namespace Library_Management
         private System.Windows.Forms.Button Deletebutton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox SearchtextBox;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown IdnumericUpDown;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button searchbtn;
     }
 }

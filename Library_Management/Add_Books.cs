@@ -82,8 +82,8 @@ namespace Library_Management
                 {
                     MessageBox.Show("Please insert properly");
                 }
-                
-              
+
+
             }
             else
             {
@@ -140,7 +140,7 @@ namespace Library_Management
 
                     MessageBox.Show("Please provide information correctly");
                 }
-        
+
             }
             else
             {
@@ -165,16 +165,113 @@ namespace Library_Management
             catch (Exception)
             {
                 MessageBox.Show("Please select properly");
-                
+
             }
-        
+
 
         }
 
         private void Deletebutton_Click(object sender, EventArgs e)
         {
-            // working on delete
+            if (BooknametextBox.Text != "" && AuthornametextBox.Text != "" && PricetextBox.Text != "")
+            {
+                try
+                {
+                    // working on delete
+                    SqlConnection con = new SqlConnection(cs);
+                    string query = "delete from NewBook where bId=@id and bname=@name";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", IdnumericUpDown.Value);
+                    cmd.Parameters.AddWithValue("@name", BooknametextBox.Text);
+                    con.Open();
+                    int a = cmd.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        MessageBox.Show("The data is delete sucessfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Deletion is failed");
+                    }
+                    con.Close();
 
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please insert value properly");
+                }
+    
+            }
+            else
+            {
+                MessageBox.Show("Please provide id to delete data");
+            }
+            ClearFunction();
+            Display();
+        }
+
+        private void Cancelbutton_Click(object sender, EventArgs e)
+        {
+            if (BooknametextBox.Text != "" || AuthornametextBox.Text != "")
+            {
+
+                if (MessageBox.Show("Do you want to cancel process?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    ClearFunction();
+                    Display();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Information are not fill yet");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+
+            if (SearchtextBox.Text != "")
+            {
+
+                //working on serach
+                SqlConnection con = new SqlConnection(cs);
+                string query = "select * from NewBook where bname like @name +'%'";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.Parameters.AddWithValue("@name", SearchtextBox.Text.Trim());
+
+                DataTable data = new DataTable();
+                sda.Fill(data);
+
+                if (data.Rows.Count > 0)
+                {
+                    dataGridView1.DataSource = data;
+
+                }
+                else
+                {
+                    MessageBox.Show("No data is found");
+                    dataGridView1.DataSource = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please search bar which book do you want to search");
+            }
+
+            SearchtextBox.Clear();
+            SearchtextBox.Focus();
         }
     }
 }
+    
+
