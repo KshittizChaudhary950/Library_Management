@@ -28,7 +28,7 @@ namespace Library_Management
 
         private void label1_Click(object sender, EventArgs e)
         {
-          
+            Clear(); // calling clear function
         }
 
         private void button1_Click(object sender, EventArgs e)

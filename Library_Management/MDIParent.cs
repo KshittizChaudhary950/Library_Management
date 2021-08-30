@@ -123,5 +123,12 @@ namespace Library_Management
                 Application.Exit();
             }
         }
+
+        private void addNewStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Addstudent stu = new Addstudent();
+            stu.Show();
+        }
     }
 }
