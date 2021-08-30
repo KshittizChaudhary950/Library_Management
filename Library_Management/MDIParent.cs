@@ -130,5 +130,12 @@ namespace Library_Management
             Addstudent stu = new Addstudent();
             stu.Show();
         }
+
+        private void viewStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            View_Student v = new View_Student();
+            v.Show();
+        }
     }
 }
