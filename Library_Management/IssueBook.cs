@@ -17,12 +17,14 @@ namespace Library_Management
         string cs = ConfigurationManager.ConnectionStrings["dbcs2"].ConnectionString;
         void ClearFunction()
         {
+            EnrollmenttextBox.Clear();
             NametextBox.Clear();
             DepartmenttextBox.Clear();
             SemestertextBox.Clear();
             ContacttextBox.Clear();
             EmailtextBox.Clear();
-            BookcomboBox.Text = "";
+            // remove selected items of combo box
+            BookcomboBox.Items.Remove(BookcomboBox.SelectedItem);
             EnrollmenttextBox.Focus();
         }
         public IssueBook()
@@ -147,7 +149,7 @@ namespace Library_Management
                 }
                 else
                 {
-                    MessageBox.Show("Please selected book or Maximum 3 books only");
+                    MessageBox.Show("Please selected book or Maximum 3 books issue only");
                 }
 
             }
