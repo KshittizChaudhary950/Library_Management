@@ -156,5 +156,20 @@ namespace Library_Management
             }
             ClearFunction();
         }
+
+        private void Refreshbutton_Click(object sender, EventArgs e)
+        {
+            ClearFunction();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Hide();
+                MDIParent mdi = new MDIParent();
+                mdi.Show();
+            }
+        }
     }
 }

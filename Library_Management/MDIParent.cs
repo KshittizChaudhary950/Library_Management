@@ -137,5 +137,12 @@ namespace Library_Management
             View_Student v = new View_Student();
             v.Show();
         }
+
+        private void issueBookToStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            IssueBook isue = new IssueBook();
+            isue.Show();
+        }
     }
 }

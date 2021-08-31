@@ -38,6 +38,8 @@ namespace Library_Management
             this.EnrollmenttextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ContacttextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.BookcomboBox = new System.Windows.Forms.ComboBox();
             this.issuedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@ namespace Library_Management
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ContacttextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,6 +105,7 @@ namespace Library_Management
             this.button2.TabIndex = 4;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Refreshbutton
             // 
@@ -116,6 +117,7 @@ namespace Library_Management
             this.Refreshbutton.TabIndex = 3;
             this.Refreshbutton.Text = "Refresh";
             this.Refreshbutton.UseVisualStyleBackColor = false;
+            this.Refreshbutton.Click += new System.EventHandler(this.Refreshbutton_Click);
             // 
             // Searchbutton
             // 
@@ -175,6 +177,25 @@ namespace Library_Management
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // ContacttextBox
+            // 
+            this.ContacttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContacttextBox.Location = new System.Drawing.Point(209, 124);
+            this.ContacttextBox.Name = "ContacttextBox";
+            this.ContacttextBox.ReadOnly = true;
+            this.ContacttextBox.Size = new System.Drawing.Size(192, 26);
+            this.ContacttextBox.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(96, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 20);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Contact";
+            // 
             // BookcomboBox
             // 
             this.BookcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -200,7 +221,7 @@ namespace Library_Management
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(209, 298);
+            this.button1.Location = new System.Drawing.Point(209, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 35);
             this.button1.TabIndex = 12;
@@ -312,25 +333,6 @@ namespace Library_Management
             this.label3.Size = new System.Drawing.Size(124, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Student Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(96, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 20);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Contact";
-            // 
-            // ContacttextBox
-            // 
-            this.ContacttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContacttextBox.Location = new System.Drawing.Point(209, 124);
-            this.ContacttextBox.Name = "ContacttextBox";
-            this.ContacttextBox.ReadOnly = true;
-            this.ContacttextBox.Size = new System.Drawing.Size(192, 26);
-            this.ContacttextBox.TabIndex = 16;
             // 
             // IssueBook
             // 

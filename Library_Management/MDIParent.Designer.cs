@@ -44,6 +44,7 @@ namespace Library_Management
             this.completeBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.issueBookToStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,22 +109,24 @@ namespace Library_Management
             // addNewStudentToolStripMenuItem
             // 
             this.addNewStudentToolStripMenuItem.Name = "addNewStudentToolStripMenuItem";
-            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.addNewStudentToolStripMenuItem.Text = "Add New Student ";
             this.addNewStudentToolStripMenuItem.Click += new System.EventHandler(this.addNewStudentToolStripMenuItem_Click);
             // 
             // viewStudentToolStripMenuItem
             // 
             this.viewStudentToolStripMenuItem.Name = "viewStudentToolStripMenuItem";
-            this.viewStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewStudentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.viewStudentToolStripMenuItem.Text = "View Student";
             this.viewStudentToolStripMenuItem.Click += new System.EventHandler(this.viewStudentToolStripMenuItem_Click);
             // 
             // issusBookToolStripMenuItem
             // 
+            this.issusBookToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.issueBookToStudentToolStripMenuItem});
             this.issusBookToolStripMenuItem.Name = "issusBookToolStripMenuItem";
-            this.issusBookToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.issusBookToolStripMenuItem.Text = "Issus Book";
+            this.issusBookToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.issusBookToolStripMenuItem.Text = "Issue Book";
             // 
             // returnBookToolStripMenuItem
             // 
@@ -153,6 +156,13 @@ namespace Library_Management
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // issueBookToStudentToolStripMenuItem
+            // 
+            this.issueBookToStudentToolStripMenuItem.Name = "issueBookToStudentToolStripMenuItem";
+            this.issueBookToStudentToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.issueBookToStudentToolStripMenuItem.Text = "Issue Book to student";
+            this.issueBookToStudentToolStripMenuItem.Click += new System.EventHandler(this.issueBookToStudentToolStripMenuItem_Click);
             // 
             // MDIParent
             // 
@@ -192,6 +202,7 @@ namespace Library_Management
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem addNewStudentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewStudentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem issueBookToStudentToolStripMenuItem;
     }
 }
 
