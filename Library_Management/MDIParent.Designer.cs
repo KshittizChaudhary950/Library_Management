@@ -40,11 +40,11 @@ namespace Library_Management
             this.addNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.issusBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueBookToStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.completeBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.issueBookToStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,17 +128,26 @@ namespace Library_Management
             this.issusBookToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.issusBookToolStripMenuItem.Text = "Issue Book";
             // 
+            // issueBookToStudentToolStripMenuItem
+            // 
+            this.issueBookToStudentToolStripMenuItem.Name = "issueBookToStudentToolStripMenuItem";
+            this.issueBookToStudentToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.issueBookToStudentToolStripMenuItem.Text = "Issue Book to student";
+            this.issueBookToStudentToolStripMenuItem.Click += new System.EventHandler(this.issueBookToStudentToolStripMenuItem_Click);
+            // 
             // returnBookToolStripMenuItem
             // 
             this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
             this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.returnBookToolStripMenuItem.Text = "Return Book";
+            this.returnBookToolStripMenuItem.Click += new System.EventHandler(this.returnBookToolStripMenuItem_Click);
             // 
             // completeBookDetailsToolStripMenuItem
             // 
             this.completeBookDetailsToolStripMenuItem.Name = "completeBookDetailsToolStripMenuItem";
             this.completeBookDetailsToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
             this.completeBookDetailsToolStripMenuItem.Text = "Complete Book Details";
+            this.completeBookDetailsToolStripMenuItem.Click += new System.EventHandler(this.completeBookDetailsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -156,13 +165,6 @@ namespace Library_Management
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // issueBookToStudentToolStripMenuItem
-            // 
-            this.issueBookToStudentToolStripMenuItem.Name = "issueBookToStudentToolStripMenuItem";
-            this.issueBookToStudentToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.issueBookToStudentToolStripMenuItem.Text = "Issue Book to student";
-            this.issueBookToStudentToolStripMenuItem.Click += new System.EventHandler(this.issueBookToStudentToolStripMenuItem_Click);
             // 
             // MDIParent
             // 

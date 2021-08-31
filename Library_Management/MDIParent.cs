@@ -144,5 +144,19 @@ namespace Library_Management
             IssueBook isue = new IssueBook();
             isue.Show();
         }
+
+        private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReturnBook r = new ReturnBook();
+            r.Show();
+        }
+
+        private void completeBookDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Complete_book_details cb = new Complete_book_details();
+            cb.Show();
+        }
     }
 }
