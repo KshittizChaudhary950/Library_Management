@@ -22,6 +22,7 @@ namespace Library_Management
             SemestertextBox.Clear();
             ContacttextBox.Clear();
             EmailtextBox.Clear();
+            BookcomboBox.Text = "";
             EnrollmenttextBox.Focus();
         }
         public IssueBook()
